@@ -1,10 +1,5 @@
 package dataholders;
 
-import java.util.ArrayList;
-import java.util.Date;
-import dataholders.DataStructure;
-import processing.core.PApplet;
-import processing.core.PImage;
 import processing.core.PVector;
 
 public class GpsData {

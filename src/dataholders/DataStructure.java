@@ -3,7 +3,6 @@ package dataholders;
 import java.util.ArrayList;
 import processing.core.PApplet;
 import processing.core.PVector;
-import dataholders.StaticData;
 
 public class DataStructure {
 	/*	PLANNED UPDATES
@@ -80,10 +79,6 @@ public class DataStructure {
 	public void setOverallLoc(float x, float y) {
 		dataFieldPosition = new PVector(x, y);
 	}
-
-	public void setReadingLoc(int index, float x, float y) {
-		dataFieldPosition = new PVector(x, y);
-	}
 	
 	public void setValue(int _readingNumber, int _reading) {
 		origValues.add(_reading);													// load value into the array
@@ -134,21 +129,17 @@ public class DataStructure {
 
 	public void setRelativeLocation(int _index, PVector _location){
 		if (relativeLocations.size() > _index) {
-			relativeLocations.set(_index, new PVector(_location.x, _location.y));
-			PVector test_two = relativeLocations.get(_index);			
-			System.out.println(_index + " gsr location  y " + test_two.x + " y: " + test_two.y);
+			relativeLocations.set(_index, new PVector(_location.x, _location.y));			
 		}
 	}
 
 	public void calculateAbsoluteLocation(float multiplierX, float multiplierY, float offsetX, float offsetY) {
-		System.out.println("multiplier  x " + multiplierX + " y: " + multiplierY + " offset x " + offsetX + " y " + offsetY);	
 		for (int i = 0; i < relativeLocations.size(); i++) {
 			PVector originalLocation = relativeLocations.get(i);
 			PVector absoluteLocation = absoluteLocations.get(i);
 			if(originalLocation.x > -1 && originalLocation.y > -1) {
 				absoluteLocation.x = offsetX + (originalLocation.x * multiplierX);
 				absoluteLocation.y = offsetY + (originalLocation.y * multiplierY);
-				System.out.println(i + " gsr location  x " + absoluteLocation.x + " y: " + absoluteLocation.y);	
 			}		
 		}
 	}
