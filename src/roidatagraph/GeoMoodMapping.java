@@ -13,7 +13,6 @@ import dataholders.GpsDataArray;
 import dataholders.StaticData;
 import dataholders.TimeStructure;
 
-@SuppressWarnings("serial")
 public class GeoMoodMapping extends PApplet {
 
 	// Variables that hold data from file
@@ -397,7 +396,6 @@ public class GeoMoodMapping extends PApplet {
 	public void mouseReleased() {
 		StaticData.updateDisplay = false;
 	}
-	
 	
 	
 	/*************
