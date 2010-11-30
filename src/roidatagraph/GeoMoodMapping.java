@@ -68,10 +68,10 @@ public class GeoMoodMapping extends PApplet {
 		StaticData.startTime = 0;
 		StaticData.endTime = 0;
 
-		String mainFilename = "/Users/julioterra/Documents/ITP/2010_(2)_Fall/expression-frameworks/data/Geo_GSR_Map/gsr-log.txt";   // name of data file that will be read
+		String mainFilename = "/Users/julioterra/Documents/eclipse/eclipse_workspace/Geo_Mood_Mapping/bin/data/gsr-log.txt";   // name of data file that will be read
 		String mainDelimiter = ",";						// delimiter to be used for chopping up data
 		int adjResolution = 50000;
-		String gpsFilename = "/Users/julioterra/Documents/ITP/2010_(2)_Fall/expression-frameworks/data/Geo_GSR_Map/gps-coords.txt";   // name of data file that will be read
+		String gpsFilename = "/Users/julioterra/Documents/eclipse/eclipse_workspace/Geo_Mood_Mapping/bin/data/gps-coords.txt";   // name of data file that will be read
 		String gpsDelimiter = ",";						// delimiter to be used for chopping up data
 		
 		loadMainData(mainFilename, mainDelimiter, adjResolution);			// LOAD DATA from TIME & GSR FILE
